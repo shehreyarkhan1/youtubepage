@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Layout</title>
+    <style>
+        .navbar {
+            display: flex;
+            /* border: 2px solid red; */
+            justify-content: space-between;
+            margin: 0 2rem 0 2rem;
+            align-items: center;
+        }
+
+        .navbar .left {
+            display: flex;
+            align-items: center;
+            /* border: 2px solid gray; */
+        }
+
+        .navbar .left img {
+            width: 80px;
+        }
+
+        .navbar .middle {
+            display: flex;
+            align-items: center;
+            flex-grow: 0.5;
+            /* border: 2px solid greenyellow; */
+        }
+
+        .navbar .middle input {
+            flex-grow: 1;
+            padding: 6px;
+            margin-right: 10px;
+            border-radius: 15px;
+        }
+
+        .navbar .middle button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        .navbar .right {
+            display: flex;
+            align-items: center;
+            flex-basis: 100px;
+            justify-content: space-around;
+            /* border: 2px solid yellow; */
+        }
+
+        .navbar .right button {
+            border: none;
+            background: transparent;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger-menu div {
+            width: 20px;
+            height: 1px;
+            background-color: black;
+            margin: 3px 0;
+            transition: 0.4s;
+
+
+
+        }
+
+        .show-menu .hamburger-menu div:nth-child(1) {
+            transform: rotate(-45deg) translate(-2px, 4px);
+        }
+
+        .show-menu .hamburger-menu div:nth-child(2) {
+            opacity: 0;
+        }
+
+        .show-menu .hamburger-menu div:nth-child(3) {
+            transform: rotate(45deg) translate(-2px, -4px);
+        }
+
+        /* Additional Settings */
+        .additional-settings {
+            display: none;
+            position: absolute;
+            background-color: white;
+            /* border: 13px solid gray; */
+            right: 0;
+
+            top: calc(10% + 10px);
+            margin-right: 25px;
+        }
+
+        .show-menu .additional-settings {
+            display: block;
+        }
+
+        .video-section {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 50px;
+        }
+
+        ul {
+            list-style-type: none;
+            /* background-color: brown; */
+            /* border: 2px solid yellow; */
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left
+        }
+
+        li a {
+            display: block;
+
+            margin-right: 80px;
+            color: black;
+            text-align: center;
+            padding: 20px;
+            align-items: center;
+            text-decoration: none;
+            justify-content: space-between;
+        }
+
+        li a:hover {
+            background-color: peachpuff;
+            border-radius: 400px;
+        }
+
+        .home {
+            display: flex;
+            margin-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="left">
+            <a href=""><img src="images/image1.png" alt=""></a>
+        </div>
+        <div class="middle">
+            <input type="text" name="query" placeholder="Search...">
+            <button type="submit"><img src="images/image3.png" width="17px" alt=""></button>
+            <button type="submit"><img src="images/image2.png" width="17px" alt=""></button>
+        </div>
+        <div class="right">
+            <a href=""><img src="images/image6.png" width="19px" alt=""></a>
+            <a href=""><img src="images/image4.png" width="19px" alt=""></a>
+            <a href=""><img src="images/image5.jpg" width="30px" style="border-radius: 100%;"></a>
+            <!-- Hamburger menu icon -->
+            <div class="hamburger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- Additional settings -->
+            <div class="additional-settings">
+                <!-- Add your additional settings content here -->
+                <p>Settings</p>
+                <p>Profile</p>
+                <p>Logout</p>
+            </div>
+        </div>
+    </nav>
+    <div class="home">
+        <ul>
+            <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Trending</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Subscriptions</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">Library</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">History</a></li>
+        </ul>
+    </div>
+    <div class="video-section">
+
+        <!-- Video section -->
+        <section>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+            <iframe style="border-radius: 20px;" width="300" height="200" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+            </iframe>
+                   </section>
+
+        <!-- ... (the rest of your page content) ... -->
+    </div>
+
+    <script>
+        // JavaScript to toggle the hamburger menu
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navbar = document.querySelector('.navbar');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navbar.classList.toggle('show-menu');
+        });
+    </script>
+</body>
+
+</html>
